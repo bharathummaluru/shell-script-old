@@ -2,9 +2,14 @@
 
 USERID=(id -u)
 
-VALIDATE() {
-
-
+VALIDATE(){
+   if [ $1 -ne 0 ]
+   then
+        echo "$2...FAILURE"
+        exit 1
+    else
+        echo "$2...SUCCESS"
+    fi
 }
 
 if [$USERID ne 0]
@@ -14,8 +19,7 @@ exit1
    else echo"you are a superuser"
 fi
 
+dnf install mysql -y
 VALIDATE $?
-
-dnf install mysqll -y
 
 
