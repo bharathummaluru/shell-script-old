@@ -2,7 +2,7 @@
 
 USERID=(id -u)
 
-VALIDATE(){
+VALIDATE() {
 
 
 }
