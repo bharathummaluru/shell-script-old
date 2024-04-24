@@ -13,11 +13,13 @@ VALIDATE(){
 }
 
 if [ $USERID -ne 0 ]
-
-   then echo"Run this script with superuser"
-exit1
-   else echo"you are a superuser"
+then
+    echo "Please run this script with root access."
+    exit 1 
+else
+    echo "You are super user."
 fi
+
 
 dnf install mysql -y
 VALIDATE $?
